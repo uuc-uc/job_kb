@@ -24,15 +24,27 @@ from pathfinder import pick_list
 
 # ---------------------------------------------------------------- 清洗工具
 
+# 不可见字符：控制字符（**保留 \t \n \r**）+ 零宽字符
+# 它们肉眼看不见，但会污染 tokenizer 和 embedding，而且极难排查
+_INVISIBLE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\u200b-\u200f\ufeff]")
+
+
+def clean_text(text: str) -> str:
+    """通用文本规整：去不可见字符 + 压空行"""
+    if not text:
+        return ""
+    text = _INVISIBLE.sub("", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def clean_html_text(raw: str) -> str:
     """HTML 片段 -> 保留换行结构的纯文本"""
     if not raw:
         return ""
     # 提取 html 除标签外的纯文本，按换行划分
     text = BeautifulSoup(raw, "lxml").get_text(separator="\n")
-    # r"\n{3,}" 代表三个以上的换行；sub 是 substitute 替换
-    text = re.sub(r"\n{3,}", "\n\n", text)
-    return text.strip()
+    return clean_text(text)
 
 
 def split_job_name(raw: str) -> tuple:
@@ -76,8 +88,8 @@ def extract_body(job: dict) -> tuple:
         except json.JSONDecodeError:
             ext = {}
 
-        infos = (ext.get("infos") or "").strip()
-        reqs = (ext.get("requirements") or "").strip()
+        infos = clean_text(ext.get("infos") or "")
+        reqs = clean_text(ext.get("requirements") or "")
 
         parts = []
         if infos:
@@ -203,8 +215,8 @@ def main(preview_n: int = 1) -> None:
         else:
             records.append(rec)
 
-    # 3) 落盘
-    out_path = Path(__file__).parent / "data" / "jobs_clean.json"
+    # 3) 落盘（data/ 在项目根目录，本文件在 ingestion/ 里，所以往上两层）
+    out_path = Path(__file__).resolve().parent.parent / "data" / "jobs_clean.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
         json.dumps(records, ensure_ascii=False, indent=2),

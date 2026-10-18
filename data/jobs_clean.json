@@ -27,7 +27,7 @@
       }
     ],
     "content_len": 735,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000364845",
@@ -53,7 +53,7 @@
       }
     ],
     "content_len": 312,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000371563",
@@ -83,7 +83,7 @@
       }
     ],
     "content_len": 198,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000429354",
@@ -109,7 +109,7 @@
       }
     ],
     "content_len": 260,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000377113",
@@ -131,15 +131,15 @@
     "content_parts": [
       {
         "section": "工作内容",
-        "text": "你好，感谢在超过80亿个节点的Graph上与我建立边，我是Tiger，现在带领小伙伴们使用最前沿的开源与闭源大模型以及各类相关技术进行AI商业化的创新与创业。\n\n以下是我的一些思考，如果你感兴趣，也欢迎和我深度探讨：\n\n【重要假设】\n\n首先我们假设在不远的未来，每个个体（Customer）都将有自己的AI助手或Agent，我们称之为CAI；同时每个盈利或非盈利组织（Business）也均会有自己的AI助手或Agent，我们称之为BAI；在以上两个假设满足的前提下，我们认为，未来B-C、B-B甚至C-C的交互将主要由代表各自利益的AI助手或Agents完成。目前已有研究者提出不同的通信协议，从最简单的MCP到去除NLP层的权重直接交互。这将极大地增加做决策时的信息交流和处理的效率，使其从人类现有的最高10bit/s增长三到五个数量级。不难推理出，决策模型将开始从碳基生物的脑中（Neural Network）转移到硅基生物的权重（Artificial Neural Network）中。\n\n【技术角度】\n\n我们重点开发BAI用以与CAI（如Deepseek / GPT / Claude / Gemini / Qwen / 豆包 / Kimi等）交互。为了实现这一目标，我们需要进行非结构化信息结构化（KG / GraphRAG / Ontology等）、人类交互方式AI化（MuseTalk / Facefusion / Whisper等）、AI人设从静态转为动态化（如星际穿越中的TARS可动态且量化的调整幽默度与坦诚程度）、计算量从Test Time Compute向训练移动（GCN / GAT / SFT / RLHF / Post-pretraining等）等多方面的研发与开发。\n\n【商业应用角度】\n\n我们将新突破的AI技术应用到之前老技术无法覆盖的场景，从而实现增量市场覆盖，而这部分增量市场体量大约是现存全部电商（Amazon|EBay|淘宝|天猫|京东|PDD|美团|抖音电商等）体量总和的3到9倍。同时我们认为BAI的成功实现会极大的威胁电商或任何中间商的存活，因为CAI会跳过需要抽取佣金的中间商而直接与服务或物品提供商的BAI对接，从而为其主人——C端用户提供性价比最高的服务或物品。\n\n【AGI角度】\n\n我们坚定的相信AGI会在我们的有生之年实现，但是我们认为其实现无法由单一个体、单一机构或单一组织通过创造单一AI单独实现，只有【多种类垂直AI协作】配合【多学科、多组织、多国合作】才能实现【真 . AGI】。而我们第一阶段目标是管理所有的信息（不只是数据），使得信息的产生、合成、运输、收集、存储、处理、交互等均为AI Native，并等待第二阶段重要Milestone的到来（我们认为会诞生一种AI原生交互系统IS - Artificial Intelligent Interactive System从而取代现有PC端和移动端OS），届时再根据具体情况调整我们的研发战略与战术。\n\n【目前开放的全职及实习的研究方向为（均为单模态或多模态）】\n\n预训练与微调 Fine-tuning / Post-pretraining with reasoning\n垂直知识领域对话机器人 Domain Specific Chatbot\n知识图谱构建 Knowledge Graph Construction without Complete Ontology\n文档检索 Document Retrieval\n基于图的检索增强生成 RAG Graph-based RAG\n图神经网络相关 GNN / GCN / GraphSAGE / PinSAGE / GAT\n多智能体协作系统 Multi-agent System (MAS)\nAI原生前端与后端 AI Native Frontend / Backend\n视频智能讲解或混剪 Video Narration Generation and Auto Editing\nAI虚拟数字人唇纹、表情与动作 AI Avatar\n营销全流程自动化 Ai-driven Marketing Automation\n其他子方向持续增加中...\n\n【岗位职责】\n\n1.    负责内部新项目prototype的研发；\n2.    阅读最新的论文，学习最前沿的技术/算法/基础架构；\n3.    解决别人解决不了的问题。\n \n【岗位要求】\n\n1.  人工智能 或 计算机科学 或 软件工程类；\n2.  在校成绩前10%及以上；\n3.  熟练掌握Python；\n4.  熟悉至少一款主流的开源或闭源大模型；\n5.  热爱人工智能，不惧怕学习新技术。\n \n【你能获得】\n\n1.   全权负责子项目：你做的不是\"某个模块的第37版迭代\"，而是真正能写进简历的独立项目，你不再只是参数调试的“螺丝钉”，而是从需求定义、技术选型到实验验证的项目主人翁，拥有完整决策与执行权限，让你的想法快速变为成果；\n2.   扁平直带：团队无上下级隔阂，技术大牛直带，5 分钟内即可碰撞想法、调整方向，免去漫长审批与沟通干扰；\n3.   高效专注 & 真正 Work\u001eLife Balance：我们坚决拒绝无意义加班，八小时深度工作，下班后彻底离线，崇尚“专注 > 内卷 && 效率 > 时长”，让你既能高效产出，也能全身心享受生活；\n4.   充足算力保障：只要你需要，我们提供足够的 GPU/TPU 计算资源，训练、微调、推理全流程无卡顿，让你的大模型探索与实验零束缚；\n5.   新模型优先体验：任何一款最新发布或 Preview 状态的大模型，你都能第一时间在公司平台上试用、测试与改进，持续站在 AI 前沿。\n \n【实习岗位薪资】\n\n在读本科实习生 - 人民币400 – 600 / 天\n在读硕士实习生 - 人民币400 – 700 / 天\n在读博士实习生 - 人民币500 – 1000 / 天\n \n【工作地址】\n\n中国广东省深圳市深圳湾科技生态园\n\n\n【One More Thing】\n\n我们是国内极少数的进行【AI全方面商业化落地】且同时【坚持长期主义潜心做研发】的商业机构，如果你想要了解更多，发个私信和我聊一聊吧~\n\n\n\n【以下的词能帮助更多的小伙伴找到我们】\nAI, 人工智能, Artificial Intelligence, 机器学习, Machine Learning, Neural Network, 神经网络, 深度学习, Deep Learning, Transformer, Data Mining, 数据挖掘, 自注意力, Self-Attention, 注意力机制, CNN, 卷积神经网络, RNN, Recurrent Neural Network, 循环神经网络, LSTM, BERT, GPT, Diffusion Model,  扩散模型, 生成式AI, Generative AI, 大语言模型, Large Language Model, LLM, 图神经网络, Graph Neural Network, GNN, GCN, 图卷积网络, GAT, 图注意力网络, Graph, Knowledge Graph, 知识图谱, Ontology, Vector DB, Vector Database, 向量数据库, Pre-training, 预训练, Post-training, 增量预训练, Continue Pre-training, RAG, Retrieval-Augmented Generation, Embedding, 嵌入表示, Rerank, Computer Vision, 计算机视觉, NLP, 自然语言处理, ASR, 语音识别, TTS, 语音合成,  强化学习, Reinforcement Learning, RLHF, 人类反馈强化学习, Federated Learning, 联邦学习, Edge AI, PyTorch, TensorFlow, CUDA, GPU, Tensor, 张量, Safetensors, Multi-agent, 多智能体, Agent, 代理, Prompt Engineering, 提示工程, Chain of Thought, 思维链, Zero-shot, One-shot, Few-shot, In-Context Learning, Self-supervised Learning, 自监督学习, Unsupervised Learning, 无监督学习, Semi-supervised Learning, 半监督学习, Contrastive Learning, 对比学习, Vision Transformer, 生成对抗网络, GAN, Variational Autoencoder, 变分自动编码器, Autoencoder, 自动编码器, Data Augmentation, 数据增强, Knowledge Distillation, 知识蒸馏, Transfer Learning, 迁移学习, Active Learning, 主动学习, LoRA, 参数高效微调, PEFT, Fine-tuning, 微调, Prompt Tuning, 提示微调, Stable Diffusion, Edge Computing, 边缘计算, 因果推断, Robotics, Tokenization, Hyperparameter, 超参数, Overfitting, 过拟合, Hallucination, 幻觉, Multimodal, 多模态, YOLO, SVM, RPA, Hugging Face, LangChain, LlamaIndex, Kubernetes, AGI, Data, 数据, Benchmark, Computer Science, 计算机科学, Data Science, 数据科学, Pattern Recognition, 模式识别, Classification, 分类, Regression, 回归, Clustering, 聚类, Dimension Reduction, 降维, Loss Function, 损失函数, Activation Function, 激活函数, Gradient Descent, 梯度下降, Backpropagation, 反向传播, TPU, CPU, 显存, Causal Inference, Computer Vision, 计算机视觉, Feature Engineering, 特征工程, Algorithm, 算法, Sentiment Analysis, 情感分析, GraphSAGE, PinSAGE, Keras, Scikit-learn, OpenCV, Spark MLlib, Docker, Distributed Computing, 分布式计算, Segmentation, 分割, KV Cache"
+        "text": "你好，感谢在超过80亿个节点的Graph上与我建立边，我是Tiger，现在带领小伙伴们使用最前沿的开源与闭源大模型以及各类相关技术进行AI商业化的创新与创业。\n\n以下是我的一些思考，如果你感兴趣，也欢迎和我深度探讨：\n\n【重要假设】\n\n首先我们假设在不远的未来，每个个体（Customer）都将有自己的AI助手或Agent，我们称之为CAI；同时每个盈利或非盈利组织（Business）也均会有自己的AI助手或Agent，我们称之为BAI；在以上两个假设满足的前提下，我们认为，未来B-C、B-B甚至C-C的交互将主要由代表各自利益的AI助手或Agents完成。目前已有研究者提出不同的通信协议，从最简单的MCP到去除NLP层的权重直接交互。这将极大地增加做决策时的信息交流和处理的效率，使其从人类现有的最高10bit/s增长三到五个数量级。不难推理出，决策模型将开始从碳基生物的脑中（Neural Network）转移到硅基生物的权重（Artificial Neural Network）中。\n\n【技术角度】\n\n我们重点开发BAI用以与CAI（如Deepseek / GPT / Claude / Gemini / Qwen / 豆包 / Kimi等）交互。为了实现这一目标，我们需要进行非结构化信息结构化（KG / GraphRAG / Ontology等）、人类交互方式AI化（MuseTalk / Facefusion / Whisper等）、AI人设从静态转为动态化（如星际穿越中的TARS可动态且量化的调整幽默度与坦诚程度）、计算量从Test Time Compute向训练移动（GCN / GAT / SFT / RLHF / Post-pretraining等）等多方面的研发与开发。\n\n【商业应用角度】\n\n我们将新突破的AI技术应用到之前老技术无法覆盖的场景，从而实现增量市场覆盖，而这部分增量市场体量大约是现存全部电商（Amazon|EBay|淘宝|天猫|京东|PDD|美团|抖音电商等）体量总和的3到9倍。同时我们认为BAI的成功实现会极大的威胁电商或任何中间商的存活，因为CAI会跳过需要抽取佣金的中间商而直接与服务或物品提供商的BAI对接，从而为其主人——C端用户提供性价比最高的服务或物品。\n\n【AGI角度】\n\n我们坚定的相信AGI会在我们的有生之年实现，但是我们认为其实现无法由单一个体、单一机构或单一组织通过创造单一AI单独实现，只有【多种类垂直AI协作】配合【多学科、多组织、多国合作】才能实现【真 . AGI】。而我们第一阶段目标是管理所有的信息（不只是数据），使得信息的产生、合成、运输、收集、存储、处理、交互等均为AI Native，并等待第二阶段重要Milestone的到来（我们认为会诞生一种AI原生交互系统IS - Artificial Intelligent Interactive System从而取代现有PC端和移动端OS），届时再根据具体情况调整我们的研发战略与战术。\n\n【目前开放的全职及实习的研究方向为（均为单模态或多模态）】\n\n预训练与微调 Fine-tuning / Post-pretraining with reasoning\n垂直知识领域对话机器人 Domain Specific Chatbot\n知识图谱构建 Knowledge Graph Construction without Complete Ontology\n文档检索 Document Retrieval\n基于图的检索增强生成 RAG Graph-based RAG\n图神经网络相关 GNN / GCN / GraphSAGE / PinSAGE / GAT\n多智能体协作系统 Multi-agent System (MAS)\nAI原生前端与后端 AI Native Frontend / Backend\n视频智能讲解或混剪 Video Narration Generation and Auto Editing\nAI虚拟数字人唇纹、表情与动作 AI Avatar\n营销全流程自动化 Ai-driven Marketing Automation\n其他子方向持续增加中...\n\n【岗位职责】\n\n1.    负责内部新项目prototype的研发；\n2.    阅读最新的论文，学习最前沿的技术/算法/基础架构；\n3.    解决别人解决不了的问题。\n \n【岗位要求】\n\n1.  人工智能 或 计算机科学 或 软件工程类；\n2.  在校成绩前10%及以上；\n3.  熟练掌握Python；\n4.  熟悉至少一款主流的开源或闭源大模型；\n5.  热爱人工智能，不惧怕学习新技术。\n \n【你能获得】\n\n1.   全权负责子项目：你做的不是\"某个模块的第37版迭代\"，而是真正能写进简历的独立项目，你不再只是参数调试的“螺丝钉”，而是从需求定义、技术选型到实验验证的项目主人翁，拥有完整决策与执行权限，让你的想法快速变为成果；\n2.   扁平直带：团队无上下级隔阂，技术大牛直带，5 分钟内即可碰撞想法、调整方向，免去漫长审批与沟通干扰；\n3.   高效专注 & 真正 WorkLife Balance：我们坚决拒绝无意义加班，八小时深度工作，下班后彻底离线，崇尚“专注 > 内卷 && 效率 > 时长”，让你既能高效产出，也能全身心享受生活；\n4.   充足算力保障：只要你需要，我们提供足够的 GPU/TPU 计算资源，训练、微调、推理全流程无卡顿，让你的大模型探索与实验零束缚；\n5.   新模型优先体验：任何一款最新发布或 Preview 状态的大模型，你都能第一时间在公司平台上试用、测试与改进，持续站在 AI 前沿。\n \n【实习岗位薪资】\n\n在读本科实习生 - 人民币400 – 600 / 天\n在读硕士实习生 - 人民币400 – 700 / 天\n在读博士实习生 - 人民币500 – 1000 / 天\n \n【工作地址】\n\n中国广东省深圳市深圳湾科技生态园\n\n【One More Thing】\n\n我们是国内极少数的进行【AI全方面商业化落地】且同时【坚持长期主义潜心做研发】的商业机构，如果你想要了解更多，发个私信和我聊一聊吧~\n\n【以下的词能帮助更多的小伙伴找到我们】\nAI, 人工智能, Artificial Intelligence, 机器学习, Machine Learning, Neural Network, 神经网络, 深度学习, Deep Learning, Transformer, Data Mining, 数据挖掘, 自注意力, Self-Attention, 注意力机制, CNN, 卷积神经网络, RNN, Recurrent Neural Network, 循环神经网络, LSTM, BERT, GPT, Diffusion Model,  扩散模型, 生成式AI, Generative AI, 大语言模型, Large Language Model, LLM, 图神经网络, Graph Neural Network, GNN, GCN, 图卷积网络, GAT, 图注意力网络, Graph, Knowledge Graph, 知识图谱, Ontology, Vector DB, Vector Database, 向量数据库, Pre-training, 预训练, Post-training, 增量预训练, Continue Pre-training, RAG, Retrieval-Augmented Generation, Embedding, 嵌入表示, Rerank, Computer Vision, 计算机视觉, NLP, 自然语言处理, ASR, 语音识别, TTS, 语音合成,  强化学习, Reinforcement Learning, RLHF, 人类反馈强化学习, Federated Learning, 联邦学习, Edge AI, PyTorch, TensorFlow, CUDA, GPU, Tensor, 张量, Safetensors, Multi-agent, 多智能体, Agent, 代理, Prompt Engineering, 提示工程, Chain of Thought, 思维链, Zero-shot, One-shot, Few-shot, In-Context Learning, Self-supervised Learning, 自监督学习, Unsupervised Learning, 无监督学习, Semi-supervised Learning, 半监督学习, Contrastive Learning, 对比学习, Vision Transformer, 生成对抗网络, GAN, Variational Autoencoder, 变分自动编码器, Autoencoder, 自动编码器, Data Augmentation, 数据增强, Knowledge Distillation, 知识蒸馏, Transfer Learning, 迁移学习, Active Learning, 主动学习, LoRA, 参数高效微调, PEFT, Fine-tuning, 微调, Prompt Tuning, 提示微调, Stable Diffusion, Edge Computing, 边缘计算, 因果推断, Robotics, Tokenization, Hyperparameter, 超参数, Overfitting, 过拟合, Hallucination, 幻觉, Multimodal, 多模态, YOLO, SVM, RPA, Hugging Face, LangChain, LlamaIndex, Kubernetes, AGI, Data, 数据, Benchmark, Computer Science, 计算机科学, Data Science, 数据科学, Pattern Recognition, 模式识别, Classification, 分类, Regression, 回归, Clustering, 聚类, Dimension Reduction, 降维, Loss Function, 损失函数, Activation Function, 激活函数, Gradient Descent, 梯度下降, Backpropagation, 反向传播, TPU, CPU, 显存, Causal Inference, Computer Vision, 计算机视觉, Feature Engineering, 特征工程, Algorithm, 算法, Sentiment Analysis, 情感分析, GraphSAGE, PinSAGE, Keras, Scikit-learn, OpenCV, Spark MLlib, Docker, Distributed Computing, 分布式计算, Segmentation, 分割, KV Cache"
       },
       {
         "section": "任职要求",
         "text": "【岗位要求】\n1.   人工智能 或 计算机科学 或 软件工程类在读硕士或在读博士；\n2.   在校成绩前20%及以上；\n3.   熟练掌握Python；\n4.   使用过ChatGPT或Claude或Gemini等；\n5.   热爱人工智能，不惧怕学习新技术。"
       }
     ],
-    "content_len": 4742,
-    "processed_at": "2026-10-18"
+    "content_len": 4738,
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000403287",
@@ -169,7 +169,7 @@
       }
     ],
     "content_len": 403,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000430762",
@@ -191,15 +191,15 @@
     "content_parts": [
       {
         "section": "工作内容",
-        "text": "岗位职责\n1.参与视觉大模型在业务场景的落地项目，包括但不限于图像理解、多模态内容生成、视觉 - 语言跨模态交互等方向的算法调研与原型开发；​\n2.协助团队完成大模型微调（Fine-tuning）、提示工程（Prompt Engineering）、模型压缩与部署适配等工作，结合业务数据优化模型效果；​\n3.负责 CV 相关数据处理与标注方案设计，参与数据集构建、清洗及质量评估，支撑模型训练与迭代；​\n4.跟踪业界前沿 CV 大模型（如 ViT、CLIP、SAM 等）与多模态技术动态，输出技术调研报告，为业务创新提供思路；​\n5.协助完成算法效果验证、性能测试及业务指标对齐，参与项目文档撰写与成果沉淀。"
+        "text": "岗位职责\n1.参与视觉大模型在业务场景的落地项目，包括但不限于图像理解、多模态内容生成、视觉 - 语言跨模态交互等方向的算法调研与原型开发；\n2.协助团队完成大模型微调（Fine-tuning）、提示工程（Prompt Engineering）、模型压缩与部署适配等工作，结合业务数据优化模型效果；\n3.负责 CV 相关数据处理与标注方案设计，参与数据集构建、清洗及质量评估，支撑模型训练与迭代；\n4.跟踪业界前沿 CV 大模型（如 ViT、CLIP、SAM 等）与多模态技术动态，输出技术调研报告，为业务创新提供思路；\n5.协助完成算法效果验证、性能测试及业务指标对齐，参与项目文档撰写与成果沉淀。"
       },
       {
         "section": "任职要求",
-        "text": "岗位要求\n1.在读硕士及以上学历，计算机视觉（CV）、计算机科学、人工智能、机器学习等相关专业，有 CV 领域科研或项目经验者优先；​\n2.熟悉深度学习基础理论，掌握 CNN、Transformer 等核心网络结构，了解至少一种主流 CV 任务（图像分类、目标检测、语义分割、图像生成等）；​\n3.具备大模型相关基础，了解视觉大模型或多模态大模型（如 CLIP、BLIP、Florence 等）的原理与应用，有大模型微调、部署或业务适配经验者加分；​\n4.熟练使用 Python，掌握 PyTorch/TensorFlow 等深度学习框架，具备数据处理（NumPy、Pandas）与可视化（Matplotlib、Seaborn）能力；​\n5.了解常用 CV 工具库（OpenCV、MMDetection、TorchVision 等），有实际项目开发或竞赛经历者优先；​\n6.具备良好的逻辑思维、问题解决能力和沟通协作意识，对业务场景中算法落地有浓厚兴趣，能快速学习新技术。"
+        "text": "岗位要求\n1.在读硕士及以上学历，计算机视觉（CV）、计算机科学、人工智能、机器学习等相关专业，有 CV 领域科研或项目经验者优先；\n2.熟悉深度学习基础理论，掌握 CNN、Transformer 等核心网络结构，了解至少一种主流 CV 任务（图像分类、目标检测、语义分割、图像生成等）；\n3.具备大模型相关基础，了解视觉大模型或多模态大模型（如 CLIP、BLIP、Florence 等）的原理与应用，有大模型微调、部署或业务适配经验者加分；\n4.熟练使用 Python，掌握 PyTorch/TensorFlow 等深度学习框架，具备数据处理（NumPy、Pandas）与可视化（Matplotlib、Seaborn）能力；\n5.了解常用 CV 工具库（OpenCV、MMDetection、TorchVision 等），有实际项目开发或竞赛经历者优先；\n6.具备良好的逻辑思维、问题解决能力和沟通协作意识，对业务场景中算法落地有浓厚兴趣，能快速学习新技术。"
       }
     ],
-    "content_len": 740,
-    "processed_at": "2026-10-18"
+    "content_len": 731,
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000429176",
@@ -227,7 +227,7 @@
       }
     ],
     "content_len": 614,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000420808",
@@ -257,7 +257,7 @@
       }
     ],
     "content_len": 716,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000452098",
@@ -287,7 +287,7 @@
       }
     ],
     "content_len": 185,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000425707",
@@ -313,7 +313,7 @@
       }
     ],
     "content_len": 390,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000462655",
@@ -343,7 +343,7 @@
       }
     ],
     "content_len": 449,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000432802",
@@ -373,7 +373,7 @@
       }
     ],
     "content_len": 584,
-    "processed_at": "2026-10-18"
+    "processed_at": "2026-10-19"
   },
   {
     "id": "30100000437286",
@@ -395,14 +395,14 @@
     "content_parts": [
       {
         "section": "工作内容",
-        "text": "27届研发提前批招聘中！不影响秋招正式批投递（7.6-8.23）\n\n互联网大厂，具有竞争力的起薪，HC多，项目实践机会多，流程推进速度快！\n\n\n在本岗位，您将有机会同时深入技术本质并驱动业务落地，具体将参与：\n\n1.大模型基座研发与优化：参与构建及优化面向电商领域的多语言、多模态（图/视频/语音等）大模型基座，全流程深入数据处理、样本标注、模型预训练（Pretrain）、有监督微调（SFT）/强化学习（RL）等关键环节；\n2.前沿技术探索与创新：持续跟踪并攻关大模型领域的前沿方向 (如：Long Context、Agent-RL、更高效的训练/推理框架等），通过算法创新持续提升模型的准确性、泛化性与性能；\n3.大模型应用落地与赋能：将先进的模型能力与电商业务场景结合，主导技术方案的设计与实现，具体应用方向包括但不限于：\n• 体验革新：AI交互式搜索、生成式推荐、智能导购、智能运营助手、智能客服机器人等；\n• 内容创造：高质量多语言、多模态（文字、图片、视频等）的商品信息生成、数字人互动等；\n• 效率提升：漏斗效率优化、实时翻译、智能代码助手等；\n4.技术价值闭环：深度理解业务场景，利用平台丰富的数据资源，推动技术创新落地，并通过AB实验等科学方法验证技术价值，最终提升用户、商家体验和商业效益。"
+        "text": "27届研发提前批招聘中！不影响秋招正式批投递（7.6-8.23）\n\n互联网大厂，具有竞争力的起薪，HC多，项目实践机会多，流程推进速度快！\n\n在本岗位，您将有机会同时深入技术本质并驱动业务落地，具体将参与：\n\n1.大模型基座研发与优化：参与构建及优化面向电商领域的多语言、多模态（图/视频/语音等）大模型基座，全流程深入数据处理、样本标注、模型预训练（Pretrain）、有监督微调（SFT）/强化学习（RL）等关键环节；\n2.前沿技术探索与创新：持续跟踪并攻关大模型领域的前沿方向 (如：Long Context、Agent-RL、更高效的训练/推理框架等），通过算法创新持续提升模型的准确性、泛化性与性能；\n3.大模型应用落地与赋能：将先进的模型能力与电商业务场景结合，主导技术方案的设计与实现，具体应用方向包括但不限于：\n• 体验革新：AI交互式搜索、生成式推荐、智能导购、智能运营助手、智能客服机器人等；\n• 内容创造：高质量多语言、多模态（文字、图片、视频等）的商品信息生成、数字人互动等；\n• 效率提升：漏斗效率优化、实时翻译、智能代码助手等；\n4.技术价值闭环：深度理解业务场景，利用平台丰富的数据资源，推动技术创新落地，并通过AB实验等科学方法验证技术价值，最终提升用户、商家体验和商业效益。"
       },
       {
         "section": "任职要求",
         "text": "1.教育背景：2025.9-2027.8期间已获得或即将获得博士/硕士学位的同学，计算机科学、人工智能、数学、物理等相关专业优先；\n2.技术根基:\n• 具备扎实的机器学习基础、出色的数据敏感度和优秀的编程能力；\n• 深入理解主流大模型（如：GPT、Deepseek等）、多模态模型(如：Gemini、Qwen-VL等）的技术原理；\n• 熟悉大模型训练全流程（Pretrain/SFT/RL/Agent等）或生成式模型（Diffusion、Flux等）者优先；\n3.创新能力：具备极强的学习能力、主动性和创新思维，能够独立分析和解决复杂技术问题，对将前沿研究应用于实际挑战充满热情；\n4.成果导向：在学术或工业项目中有突出表现者优先，例如但不限于：\n• 在CCF-A类会议/期刊(如NeurlPS, ICML, CVPR, ACL等）发表过论文；\n• 在ACM编程竞赛、Kaggle等知名算法竞赛中获奖；\n• 主导或深度参与过有较大技术影响力的大模型相关项目"
       }
     ],
-    "content_len": 983,
-    "processed_at": "2026-10-18"
+    "content_len": 982,
+    "processed_at": "2026-10-19"
   }
 ]

@@ -9,8 +9,12 @@ loader.py —— 从 HTML 里挖出内嵌的初始状态
 """
 
 import json
+from pathlib import Path
 
-html = open(r"E:\RAG\job_kb\data\raw\nowcoder_p1.html", encoding="utf-8").read()
+# data/ 在项目根目录（本文件在 ingestion/ 里，所以往上两层）
+RAW_PATH = Path(__file__).resolve().parent.parent / "data" / "raw" / "nowcoder_p1.html"
+
+html = RAW_PATH.read_text(encoding="utf-8")
 
 start = html.find("__INITIAL_STATE__")      # 先找到变量名在哪
 start = html.find("{", start)                # 从那儿往后找第一个 "{"，那才是 JSON 的起点
