@@ -20,13 +20,13 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)#exist_ok=True 表示目录已存在�
 out_path = RAW_DIR / "nowcoder_p1.html"
 if "__INITIAL_STATE__" not in resp.text:
     print("响应是空壳页，不写盘")
-    return
-out_path.write_text(resp.text, encoding="utf-8")
-print(f"[已存]{out_path} ({out_path.stat().st_size} 字节)")
+else:
+    out_path.write_text(resp.text, encoding="utf-8")
+    print(f"[已存]{out_path} ({out_path.stat().st_size} 字节)")
 
-pos = resp.text.find("__INITIAL_STATE__")
-print(f"[位置] 第 {pos} 个字符")
-print(f"[预览] {resp.text[pos:pos + 200]}")
+    pos = resp.text.find("__INITIAL_STATE__")
+    print(f"[位置] 第 {pos} 个字符")
+    print(f"[预览] {resp.text[pos:pos + 200]}")
 
 time.sleep(1.5)
 

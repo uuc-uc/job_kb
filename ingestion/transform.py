@@ -35,6 +35,7 @@ def clean_text(text: str) -> str:
         return ""
     text = _INVISIBLE.sub("", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
+    text = re.sub(r"[\xa0\u3000]", " ", text)
     return text.strip()
 
 
@@ -78,6 +79,10 @@ def extract_body(job: dict) -> tuple:
       无 ext   -> 第三方（moka）格式，正文在 data.description 里，是 HTML
 
     注意：这里只负责「识别格式」，决定这条要不要是 build_record 的事。
+
+    如果 transform 当初把正文拼成一个 735 字的字符串，chunk.py 就只能拿到一整块，
+    要么整块变成一片（768 字的向量包含“公司简介 + 岗位职责 + 任职要求”，向量纯度会下降）
+    所以此时考虑将正文拆分成“工作内容”与“任职要求”
     """
     ext_str = job.get("ext")
 
