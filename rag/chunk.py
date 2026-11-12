@@ -54,7 +54,7 @@ def split_by_paragraph(text: str, max_len: int = MAX_CHUNK_LEN, overlap: int = O
                 pieces.append(p[i:i + max_len])
             if len(pieces) >= 2 and len(pieces[-1]) < overlap:
                 pieces[-2] += pieces[-1]
-                pieces.pop()
+                pieces.pop()#并尾
             continue
 
         if not buf:# 情况 2：buf 还空着，直接放
