@@ -27,6 +27,8 @@ def make_chunk(record: dict, section: str, text: str, idx: int) -> dict:
         "section": section,
         "text": text,
         "char_len": len(text),
+        "job_type": record["job_type"],
+        "url": record["url"]
     }
 
 
