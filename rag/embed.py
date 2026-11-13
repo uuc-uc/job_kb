@@ -85,6 +85,7 @@ def main():
 
     t0 = time.time()
     vectors = embed_texts(texts)
+    #vectors为list[list[float]],vectors[0][:6]为[-0.0722, 0.0079, -0.0374, 0.0114, -0.0108, -0.0039]，第一个向量取其1024维度的前六维
     cost = time.time() - t0
 
     print(f"[完成] {len(texts)} 片 -> {len(vectors)} 个向量，维度 {len(vectors[0])}，{cost:.1f}s")
@@ -104,12 +105,16 @@ def main():
             key=lambda x: x[0],
             reverse=True,
         )
+        #scored为list[tuple]，scored[0]为(0.6826, {chunk_id: '30100000438605_任职要求_1', job_name: '大模型算法', …})
         print(f"查询：{q}")
-        for score, c in scored[:3]:
+        for score, c in scored[:3]:#[:3]为选择排名前三的两元元组，例：c代表{chunk_id: '30100000438605_任职要求_1', job_name: '大模型算法', …}，score代表0.6826
             print(f"  {score:.4f}  {c['chunk_id']:<36} {c['company']} / {c['job_name']}")
         print()
 
 
 if __name__ == "__main__":
     main()
+
+#note:评测要用 Hit@5 / MRR 这种只看排名的指标，而不是“相似度 > 0.7 才算命中”这种绝对阈值,scored[-1][0] = 0.3714
+#即便是最不相关的片段也有0.37,是因为所有向量共享一个公共分量，基线被抬高了
 
