@@ -1,3 +1,9 @@
+"""
+只要在向量入库之后，再将问题向量化后去query就能使用top-k排序查询返回distance
+此模块将用get_collection懒加载向量库对象，对数据库进行操作
+build_metadatas将chunk中的一些字段变成元数据的列表，并且将city多值拆分，方便查询
+最后store函数使用collection操作对象对整理好的数据以及元数据upsert插入数据库，仅补全不add
+"""
 import json
 from pathlib import Path
 
@@ -84,3 +90,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+#note:1.HNSW 算完距离，返回 label（[3, 17, 21]）2.查 embeddings：label → chunk_id（3 → '30100000464672_工作内容_1'）
+    #3.用 id=3 查 embedding_metadata（返回 8 行 key-value）4.拼成一条完整记录（{chunk_id, text, city, company, …}）
