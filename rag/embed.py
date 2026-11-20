@@ -49,7 +49,7 @@ def _get_model() -> SentenceTransformer:
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    """把一批文本变成等长向量，顺序与输入严格一一对应。"""
+    """把一批文本变成等长向量，顺序与输入严格一一对应。只负责将词句转换为向量不负责入库"""
     if not texts:
         return []
 
