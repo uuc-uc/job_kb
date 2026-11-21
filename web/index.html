@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>就业知识问答</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 32px 20px;
+    font-family: "Microsoft YaHei", system-ui, sans-serif;
+    background: #f6f6f4; color: #2c2c2a;
+  }
+  .page { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: #888780; font-size: 13px; margin: 0 0 24px; }
+
+  .form { display: flex; gap: 8px; flex-wrap: wrap; }
+  #query {
+    flex: 1 1 320px; padding: 10px 12px; font-size: 14px;
+    border: 1px solid #d5d5d0; border-radius: 8px; background: #fff;
+  }
+  select {
+    padding: 10px 8px; font-size: 14px; border: 1px solid #d5d5d0;
+    border-radius: 8px; background: #fff;
+  }
+  #ask {
+    padding: 10px 20px; font-size: 14px; border: 0; border-radius: 8px;
+    background: #185fa5; color: #fff; cursor: pointer;
+  }
+  #ask:disabled { background: #a9bfd4; cursor: not-allowed; }
+
+  #status { margin: 14px 0 8px; font-size: 13px; color: #888780; }
+  #answer {
+    white-space: pre-wrap; line-height: 1.75; font-size: 15px;
+    background: #fff; border: 1px solid #e5e5e0; border-radius: 10px;
+    padding: 16px 18px; min-height: 20px;
+  }
+  #answer:empty { display: none; }
+
+  .card {
+    background: #fff; border: 1px solid #e5e5e0; border-left: 3px solid #185fa5;
+    border-radius: 8px; padding: 12px 14px; margin-top: 10px;
+  }
+  .card-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; }
+  .idx { font-weight: 600; color: #185fa5; }
+  .co { font-weight: 600; }
+  .tag {
+    background: #f1efe8; color: #5f5e5a; padding: 1px 7px;
+    border-radius: 4px; font-size: 12px;
+  }
+  .score { margin-left: auto; color: #888780; font-variant-numeric: tabular-nums; }
+  .card-body { margin-top: 8px; font-size: 13px; line-height: 1.7; color: #444; white-space: pre-wrap; }
+  .link { display: inline-block; margin-top: 8px; font-size: 12px; color: #185fa5; text-decoration: none; }
+  .link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>就业知识问答</h1>
+  <p class="sub">基于 14 个岗位的招聘要求 · RAG 检索增强</p>
+
+  <div class="form">
+    <input id="query" placeholder="例如：哪个岗位要求 985 硕士" />
+    <select id="city">
+      <option value="">全部城市</option>
+      <option>北京</option><option>上海</option><option>广州</option>
+      <option>杭州</option><option>南京</option><option>成都</option><option>西安</option>
+    </select>
+    <select id="jobType">
+      <option value="">全部类型</option>
+      <option>实习</option><option>校招</option>
+    </select>
+    <select id="k">
+      <option value="3">3 条</option>
+      <option value="5" selected>5 条</option>
+      <option value="10">10 条</option>
+    </select>
+    <button id="ask">查询</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="answer"></div>
+  <div id="sources"></div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  })[c]);
+}
+
+function renderSources(sources) {
+  const box = $("sources");
+  sources.forEach((s, i) => {
+    const el = document.createElement("div");
+    el.className = "card";
+    el.innerHTML = `
+      <div class="card-head">
+        <span class="idx">[${i + 1}]</span>
+        <span class="co">${escapeHtml(s.company)}</span>
+        <span>${escapeHtml(s.job_name)}</span>
+        <span class="tag">${escapeHtml(s.city.join("/"))}</span>
+        <span class="tag">${escapeHtml(s.job_type)}</span>
+        <span class="tag">${escapeHtml(s.section)}</span>
+        <span class="score">${s.score.toFixed(4)}</span>
+      </div>
+      <div class="card-body">${escapeHtml(s.text)}</div>
+      <a class="link" href="${escapeHtml(s.url)}" target="_blank" rel="noopener">查看原岗位</a>
+    `;
+    box.appendChild(el);
+  });
+}
+
+async function ask() {
+  const query = $("query").value.trim();
+  if (!query) {
+    $("status").textContent = "请输入问题";
+    return;
+  }
+
+  $("ask").disabled = true;
+  $("status").textContent = "检索并生成中…";
+  $("answer").textContent = "";
+  $("sources").innerHTML = "";
+
+  const body = {
+    query,
+    city: $("city").value || null,
+    job_type: $("jobType").value || null,
+    k: Number($("k").value),
+  };
+
+  try {
+    const resp = await fetch("/api/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(`${resp.status} ${JSON.stringify(err.detail ?? err)}`);
+    }
+
+    const data = await resp.json();
+    $("status").textContent = `返回 ${data.sources.length} 条来源`;
+    $("answer").textContent = data.answer;
+    renderSources(data.sources);
+  } catch (e) {
+    $("status").textContent = "出错了：" + e.message;
+  } finally {
+    $("ask").disabled = false;
+  }
+}
+
+$("ask").addEventListener("click", ask);
+$("query").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") ask();
+});
+</script>
+</body>
+</html>

@@ -8,10 +8,12 @@
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
 from api.schemas import AskRequest, AskResponse
 from rag.embed import embed_texts
 from rag.generate import answer
+from rag.embed import BASE, embed_texts
 
 
 @asynccontextmanager
@@ -35,3 +37,6 @@ def health() -> dict:
 def ask(req: AskRequest) -> dict:
     return answer(req.query, city=req.city, job_type=req.job_type, k=req.k)
 
+
+#必须放最后“/”会匹配所有路径
+app.mount("/", StaticFiles(directory=str(BASE / "web"), html=True), name="web")
