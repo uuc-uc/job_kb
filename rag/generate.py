@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from rag.retrieve import search
+from rag.query import parse as parse_query
 
 
 BASE = Path(__file__).resolve().parent.parent
@@ -61,7 +62,9 @@ def build_messages(query: str, rows: list[dict]) -> list[dict]:
 
 
 def answer(query: str, city: str | None = None, job_type: str | None = None, k: int = 5) -> dict:
-    rows = search(query, city=city, job_type=job_type, k=k)
+    """p为self-query组件，search()为retrieve组件"""
+    p = parse_query(query, city, job_type)
+    rows = search(p["semantic"], k=k, extra_where=p["where"])
 
     if not rows:
         return {

@@ -35,15 +35,37 @@ def build_where(city: str | None = None, job_type: str | None = None):
                           #{"$and": [条件1, 条件2, 条件3]}
 
 
-def search(query: str, city: str | None = None, job_type: str | None = None, k: int = DEFAULT_K) -> list[dict]:
+def _flatten(where: dict | None) -> list[dict]:
+    """
+    新引入self-query机制，此函数用于将新的where与旧的where统一制成列表，
+    后续函数里合并，因为chromadb不允许$and嵌套使用，
+    必须{"$and": [条件1, 条件2, 条件3]}以此形式
+    """
+    if not where:
+        return []
+    if len(where) == 1 and "$and" in where:#此为当列表存在{"$and": [条件1, 条件2, 条件3]}此形式便满足len为1就将$and去处防止嵌套满足合并条件
+        return list(where["$and"])
+    return [where]
+
+
+def search(query: str, city: str | None = None, job_type: str | None = None, k: int = DEFAULT_K, extra_where: dict | None = None) -> list[dict]:
     """返回时按相似度降序片段"""
+    conds = _flatten(build_where(city, job_type)) + _flatten(extra_where)
+    if not conds:
+        where = None
+    elif len(conds) == 1:
+        where = conds[0]
+    else:
+        where = {"$and": conds}
+
+
     qv = embed_texts([query])[0]
     #embed_texts([q])->list[list[float]],向量的列表
     #embed_texts([q])[0]->list[float],第一条向量,一条1024(float)维
     res = get_collection().query(
         query_embeddings=[qv],
         n_results=k,
-        where=build_where(city, job_type),
+        where=where,
         include=["documents", "metadatas", "distances"],
     )
 
